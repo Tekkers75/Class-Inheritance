@@ -1,4 +1,6 @@
-﻿#include <iostream>
+/// @author Саранчин К.А.
+/// Основная программа 
+#include <iostream>
 #include <exception>
 #include "Fish.h"
 

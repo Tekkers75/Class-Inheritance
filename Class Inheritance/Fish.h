@@ -1,3 +1,5 @@
+/// @author РЎР°СЂР°РЅС‡РёРЅ Рљ.Рђ.
+/// Р—Р°РіРѕР»РѕРІС‡РЅС‹Р№ С„Р°Р№Р» РєР»Р°СЃСЃР° Date
 #pragma once
 #include <iostream>
 
@@ -5,31 +7,31 @@
 using namespace std;
 
 
-class Aquatic_Inhabitants		/// Водные обитатели
+class Aquatic_Inhabitants		/// Р’РѕРґРЅС‹Рµ РѕР±РёС‚Р°С‚РµР»Рё
 {
 protected:
-	string eat;			/// Чем питаются 
-	double size;		/// Размер
-	string habitat;		/// Cреда обитания
+	string eat;			/// Р§РµРј РїРёС‚Р°СЋС‚СЃСЏ 
+	double size;		/// Р Р°Р·РјРµСЂ
+	string habitat;		/// CСЂРµРґР° РѕР±РёС‚Р°РЅРёСЏ
 
 
 public:
 	
-	Aquatic_Inhabitants(); /// Конструктор без параметров
+	Aquatic_Inhabitants(); /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 
-	Aquatic_Inhabitants(string eat1, double size1, string habitat1); /// Конструктор с параметрами
+	Aquatic_Inhabitants(string eat1, double size1, string habitat1); /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 
-	~Aquatic_Inhabitants(); /// Деструктор
+	~Aquatic_Inhabitants(); /// Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
 
-	virtual string toString(); /// Вывод в одну строку
+	virtual string toString(); /// Р’С‹РІРѕРґ РІ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ
 
-	void set_size(double l); /// Установить размер
+	void set_size(double l); /// РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЂР°Р·РјРµСЂ
 
-	double get_size(); /// Вернуть длину
+	double get_size(); /// Р’РµСЂРЅСѓС‚СЊ РґР»РёРЅСѓ
 
-	void set_eat(string eat1); /// Установить рацион питания
+	void set_eat(string eat1); /// РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЂР°С†РёРѕРЅ РїРёС‚Р°РЅРёСЏ
 
-	string get_eat(); /// Вернуть рацион питания
+	string get_eat(); /// Р’РµСЂРЅСѓС‚СЊ СЂР°С†РёРѕРЅ РїРёС‚Р°РЅРёСЏ
 
 	void set_habitat(string habitat1);
 
@@ -38,40 +40,40 @@ public:
 
 };
 
-/// Класс дельфин
+/// РљР»Р°СЃСЃ РґРµР»СЊС„РёРЅ
 class Dolphin: public Aquatic_Inhabitants
 {
 private: 
-	string classDolphin;		/// Вид дельфина
-	string Echolocation;		/// Эхолокация
+	string classDolphin;		/// Р’РёРґ РґРµР»СЊС„РёРЅР°
+	string Echolocation;		/// Р­С…РѕР»РѕРєР°С†РёСЏ
 public:
-	Dolphin(); //Конструктор без параметров
+	Dolphin(); //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 
-	Dolphin(string class1, string echo); /// Конструктор с параметрами
+	Dolphin(string class1, string echo); /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 
-	~Dolphin(); /// Деструктор
+	~Dolphin(); /// Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
 
 	void set_parametr(string eat1, double size1, string habitat1);
 
-	string toString() override; /// Вывод в одну строку
+	string toString() override; /// Р’С‹РІРѕРґ РІ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ
 
-	void set_сlass(string class1); /// Установить вид
+	void set_СЃlass(string class1); /// РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІРёРґ
 
-	string get_сlass(); /// Вернуть вид
+	string get_СЃlass(); /// Р’РµСЂРЅСѓС‚СЊ РІРёРґ
 
-	void set_echo(string echo); /// Установить эхолокацию
+	void set_echo(string echo); /// РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЌС…РѕР»РѕРєР°С†РёСЋ
 
-	string get_echo(); /// вернуть эхолокацию
+	string get_echo(); /// РІРµСЂРЅСѓС‚СЊ СЌС…РѕР»РѕРєР°С†РёСЋ
 
 };
 
-/// Класс акула
+/// РљР»Р°СЃСЃ Р°РєСѓР»Р°
 class Shark : public Aquatic_Inhabitants
 {
 protected:
-	string classShark;			/// Вид акулы
-	string painImpulses;		/// Болевые импульсы
-	double teeth;				/// Кол-во зубов
+	string classShark;			/// Р’РёРґ Р°РєСѓР»С‹
+	string painImpulses;		/// Р‘РѕР»РµРІС‹Рµ РёРјРїСѓР»СЊСЃС‹
+	double teeth;				/// РљРѕР»-РІРѕ Р·СѓР±РѕРІ
 
 public:
 
@@ -83,7 +85,7 @@ public:
 
 	void set_parametr(string eat1, double size1);
 	
-	string toString() override; /// Вывод в одну строку
+	string toString() override; /// Р’С‹РІРѕРґ РІ РѕРґРЅСѓ СЃС‚СЂРѕРєСѓ
 
 	void set_class1(string class1);
 

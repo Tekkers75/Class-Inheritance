@@ -1,8 +1,10 @@
+/// @author РЎР°СЂР°РЅС‡РёРЅ Рљ.Рђ.
+/// РљР»Р°СЃСЃ Р С‹Р±С‹, РїРѕРґРєР»Р°СЃСЃС‹ РђРєСѓР»Р° Рё Р”РµР»СЊС„РёРЅ
 #include <iostream>
 #include <exception>
 #include <string>
 #include "Fish.h"
-/// Спросить как передавать по ссылке что бы среда обитания передавалась всем
+/// РЎРїСЂРѕСЃРёС‚СЊ РєР°Рє РїРµСЂРµРґР°РІР°С‚СЊ РїРѕ СЃСЃС‹Р»РєРµ С‡С‚Рѕ Р±С‹ СЃСЂРµРґР° РѕР±РёС‚Р°РЅРёСЏ РїРµСЂРµРґР°РІР°Р»Р°СЃСЊ РІСЃРµРј
 
 using namespace std;
 
@@ -19,9 +21,9 @@ string eraseNulls(double number) {
 
 Aquatic_Inhabitants::Aquatic_Inhabitants()
 {
-	eat = "Fish";			/// Чем питаются 
-	size = 2500;			/// Размер
-	habitat = "Sea";		/// Cреда обитания
+	eat = "Fish";			/// Р§РµРј РїРёС‚Р°СЋС‚СЃСЏ 
+	size = 2500;			/// Р Р°Р·РјРµСЂ
+	habitat = "Sea";		/// CСЂРµРґР° РѕР±РёС‚Р°РЅРёСЏ
 }
 
 Aquatic_Inhabitants::Aquatic_Inhabitants(string eat1, double size1, string habitat1)
@@ -74,7 +76,7 @@ string Aquatic_Inhabitants::get_habitat() {
 
 
 Dolphin::Dolphin() {
-	classDolphin = "Delph";		/// Вид дельфина
+	classDolphin = "Delph";		/// Р’РёРґ РґРµР»СЊС„РёРЅР°
 	Echolocation = "Have";
 }
 
@@ -100,12 +102,12 @@ string Dolphin::toString() {
 	return "Eat: " + eat + " " + "size: " + eraseNulls(size) + " " + "sm " + "habitat: " + habitat + " " + "class dolphin: " + classDolphin + " " + "echo location: " + Echolocation + " ";
 }
 
-void Dolphin::set_сlass(string class1) {
+void Dolphin::set_СЃlass(string class1) {
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
 	classDolphin = class1;
 }
 
-string Dolphin::get_сlass() {
+string Dolphin::get_СЃlass() {
 	return classDolphin;
 }
 
@@ -119,8 +121,8 @@ string Dolphin::get_echo() {
 }
 
 Shark::Shark() {
-	classShark = "Tiger";		/// Вид акулы
-	painImpulses = "Don't";		/// Болевые импульсы
+	classShark = "Tiger";		/// Р’РёРґ Р°РєСѓР»С‹
+	painImpulses = "Don't";		/// Р‘РѕР»РµРІС‹Рµ РёРјРїСѓР»СЊСЃС‹
 	teeth = 500;
 }
 

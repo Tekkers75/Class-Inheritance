@@ -9,30 +9,39 @@ using namespace std;
 int main() {
 	try {
 		Aquatic_Inhabitants Fish("Fish",2500, "Sea");
+		cout << Fish.toString() << endl << endl;
 
-		Dolphin Dolhp1("Mleko","Have");
-		Dolhp1.set_eat("Small Fish");
-		Dolhp1.set_parametr("Fish", 2400, "sea");
-
-		Shark Shark1("Big fish",0);
-		Shark1.set_eat("Eat fish and man");
-		Shark1.set_class1("fish123");
-		Shark1.set_parametr("Eat man", 2865);
-		Shark1.set_size(6262);
-		Shark1.set_pain(0);
-
-
-		cout << Fish.toString() << endl;
+		Dolphin Dolhp1("killer whales",1);
+		Dolhp1.set_parametr("Whales", 2400, "Sea");
 		cout << Dolhp1.toString() << endl;
+
+		Dolphin Dolhp4;
+		Dolhp4.set_size(3800);
+		Dolhp4.set_сlass("striped dolphin");
+		Dolhp4.set_echo(1);
+		cout << Dolhp4.toString() << endl;
+
+
+		Shark Shark1("White",0);
+		Shark1.set_parametr("all", 4250,"South sea");
 		cout << Shark1.toString() << endl;
+
+		Shark Shark4;
+		Shark4.set_class1("Whale");
+		Shark4.set_eat("Plankton");
+		Shark4.set_size(7730);
+		cout << Shark4.toString() << endl;
+		
+		
+		
 
 		Aquatic_Inhabitants Fish1;
 		Dolphin Dolhp2;
-		Aquatic_Inhabitants* Fish2 = &Dolhp2;
-		Aquatic_Inhabitants* Fish3 = new Shark;
+		Aquatic_Inhabitants* Fish2 = &Dolhp2;	/// Указатель на тип Dolphin
+		Aquatic_Inhabitants* Fish3 = new Shark; /// Создание динамического объекта
 
 		cout << Fish2->toString() << endl;
-		cout << Fish3->toString() << endl;
+		cout << Fish3->toString() << endl;		/// Программа сама распознает какой тип хранится в Tool_2 и Tool_3
 
 
 	}

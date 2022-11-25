@@ -1,13 +1,13 @@
 /// @author Саранчин К.А.
-/// Заголовчный файл класса Date
+/// Заголовочный файл класса Date
 #pragma once
 #include <iostream>
 
 
 using namespace std;
 
-
-class Aquatic_Inhabitants		/// Водные обитатели
+/// Класс водные обитатели
+class Aquatic_Inhabitants		
 {
 protected:
 	string eat;			/// Чем питаются 
@@ -16,25 +16,34 @@ protected:
 
 
 public:
-	
-	Aquatic_Inhabitants(); /// Конструктор без параметров
+	/// Конструктор без параметров
+	Aquatic_Inhabitants(); 
 
-	Aquatic_Inhabitants(string eat1, double size1, string habitat1); /// Конструктор с параметрами
+	/// Конструктор с параметрами
+	Aquatic_Inhabitants(string eat1, double size1, string habitat1); 
 
-	~Aquatic_Inhabitants(); /// Деструктор
+	/// Деструктор
+	~Aquatic_Inhabitants(); 
 
-	virtual string toString(); /// Вывод в одну строку
+	/// виртуальный вывод в одну строку
+	virtual string toString(); 
 
-	void set_size(double l); /// Установить размер
+	/// Установить длину
+	void set_size(double l); 
 
-	double get_size(); /// Вернуть длину
+	/// Вернуть длину
+	double get_size(); 
 
-	void set_eat(string eat1); /// Установить рацион питания
+	/// Установить рацион питания
+	void set_eat(string eat1); 
 
-	string get_eat(); /// Вернуть рацион питания
+	/// Вернуть рацион питания
+	string get_eat(); 
 
+	/// Установить место обитания
 	void set_habitat(string habitat1);
 
+	/// Вернуть место обитания
 	string get_habitat();
 
 
@@ -44,26 +53,35 @@ public:
 class Dolphin: public Aquatic_Inhabitants
 {
 private: 
-	string classDolphin;		/// Вид дельфина
+	string classDolphin;	/// Вид дельфина
 	bool Echolocation;		/// Эхолокация
 public:
-	Dolphin(); //Конструктор без параметров
+	/// Конструктор без параметров
+	Dolphin(); 
 
-	Dolphin(string class1, bool echo); /// Конструктор с параметрами
+	/// Конструктор с параметрами
+	Dolphin(string class1, bool echo); 
 
-	~Dolphin(); /// Деструктор
+	/// Деструктор
+	~Dolphin(); 
 
+	/// Установить параметры из основного класса
 	void set_parametr(string eat1, double size1, string habitat1);
 
-	string toString() override; /// Вывод в одну строку
+	/// Виртуальный вывод в одну строку
+	string toString() override; 
 
-	void set_сlass(string class1); /// Установить вид
+	/// Установить вид
+	void set_сlass(string class1); 
 
-	string get_сlass(); /// Вернуть вид
+	/// Вернуть вид
+	string get_сlass(); 
 
-	void set_echo(bool echo); /// Установить эхолокацию
+	/// Установить эхолокацию
+	void set_echo(bool echo); 
 
-	bool get_echo(); /// вернуть эхолокацию
+	/// вернуть эхолокацию
+	bool get_echo(); 
 
 };
 
@@ -72,32 +90,43 @@ class Shark : public Aquatic_Inhabitants
 {
 protected:
 	string classShark;			/// Вид акулы
-	bool painImpulses;		/// Болевые импульсы
-	double teeth;				/// Кол-во зубов
+	bool painImpulses;			/// Болевые импульсы
+	/*double teeth;				/// Кол-во зубов*/
 
 public:
 
+	/// Конструктор без параметров
 	Shark();
 
+	/// Конструктор с параметрами
 	Shark(string class1, bool pain); 
-
+	
+	/// Деструктор
 	~Shark();
 
-	void set_parametr(string eat1, double size1);
+	/// Установить параметры из основного класса
+	void set_parametr(string eat1, double size1, string habitat1);
 	
-	string toString() override; /// Вывод в одну строку
+	/// Виртуальный вывод в одну строку
+	string toString() override; 
 
+	/// Установить вид
 	void set_class1(string class1);
 
+	/// Вернуть вид 
 	string get_class1();
 
+	/// Установить болевые импульсы
 	void set_pain(bool pain);
 
+	/// Вернуть болевые импульсы
 	bool get_pain();
 
-	void set_teeth(double teeth);
-
-	double get_teeth();
+	/// Установить кол-во зубов
+	/*void set_teeth(double teeth);
+	* 
+	/// Вернуть кол-во зубов
+	double get_teeth();*/
 };
 
 

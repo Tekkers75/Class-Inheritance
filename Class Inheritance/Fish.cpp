@@ -4,7 +4,6 @@
 #include <exception>
 #include <string>
 #include "Fish.h"
-/// Спросить как передавать по ссылке что бы среда обитания передавалась всем
 
 using namespace std;
 
@@ -77,12 +76,12 @@ string Aquatic_Inhabitants::get_habitat() {
 
 Dolphin::Dolphin() {
 	classDolphin = "Delph";		/// Вид дельфина
-	Echolocation = "Have";
+	Echolocation = 1;
 }
 
-Dolphin::Dolphin(string class1, string echo) {
+Dolphin::Dolphin(string class1, bool echo) {
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
-	if (echo == "") throw invalid_argument("Error: field echo is empty");
+	if (echo != 1 && echo != 0) throw invalid_argument("Error: field echo is empty");
 	classDolphin = class1;
 	Echolocation = echo;
 }
@@ -99,7 +98,7 @@ void Dolphin::set_parametr(string eat1, double size1, string habitat1) {
 }
 
 string Dolphin::toString() {
-	return "Eat: " + eat + " " + "size: " + eraseNulls(size) + " " + "sm " + "habitat: " + habitat + " " + "class dolphin: " + classDolphin + " " + "echo location: " + Echolocation + " ";
+	return Aquatic_Inhabitants::toString() + " " + "class dolphin: " + classDolphin + " " + "echo location: " + (Echolocation == 1 ? "yes" : "no") + " ";
 }
 
 void Dolphin::set_сlass(string class1) {
@@ -111,22 +110,23 @@ string Dolphin::get_сlass() {
 	return classDolphin;
 }
 
-void Dolphin::set_echo(string echo) {
-	if (echo == "") throw invalid_argument("Error: field echo is empty");
+void Dolphin::set_echo(bool echo) {
+	if (echo != 1 && echo != 0) throw invalid_argument("Error: field echo is empty");
 	Echolocation = echo;
 }
 
-string Dolphin::get_echo() {
+bool Dolphin::get_echo() {
 	return Echolocation;
 }
 
 Shark::Shark() {
 	classShark = "Tiger";		/// Вид акулы
-	painImpulses = "Don't";		/// Болевые импульсы
+	painImpulses = 0;			/// Болевые импульсы
 	teeth = 500;
 }
 
-Shark::Shark(string class1, string pain) {
+Shark::Shark(string class1, bool pain) {
+	if (pain != 1 && pain != 0) throw invalid_argument("Error: field pain is empty");
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
 	classShark = class1;
 	painImpulses = pain; 
@@ -144,7 +144,7 @@ void Shark::set_parametr(string eat1, double size1) {
 }
 
 string Shark::toString() {
-	return "Eat: " + eat + " " + "size:  " + eraseNulls(size) + " " + "sm " + "habitat: " + habitat + " " + "class Shark: " + classShark + " " + "pain impulses: " + painImpulses + " ";
+	return Aquatic_Inhabitants::toString() + " " + "class Shark: " + classShark + " " + "pain impulses: " + (painImpulses == 1 ? "yes" : "no") + " ";
 }
 
 void Shark::set_class1(string class1) {
@@ -156,12 +156,12 @@ string Shark::get_class1() {
 	return classShark;
 }
 
-void Shark::set_pain(string pain) {
-	if (pain == "") throw invalid_argument("Error: field pain is empty");
+void Shark::set_pain(bool pain) {
+	if (pain != 1 && pain != 0 ) throw invalid_argument("Error: field pain is empty");
 	painImpulses = pain;
 }
 
-string Shark::get_pain() {
+bool Shark::get_pain() {
 	return painImpulses;
 }
 

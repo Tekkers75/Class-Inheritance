@@ -45,11 +45,11 @@ class Dolphin: public Aquatic_Inhabitants
 {
 private: 
 	string classDolphin;		/// Вид дельфина
-	string Echolocation;		/// Эхолокация
+	bool Echolocation;		/// Эхолокация
 public:
 	Dolphin(); //Конструктор без параметров
 
-	Dolphin(string class1, string echo); /// Конструктор с параметрами
+	Dolphin(string class1, bool echo); /// Конструктор с параметрами
 
 	~Dolphin(); /// Деструктор
 
@@ -61,9 +61,9 @@ public:
 
 	string get_сlass(); /// Вернуть вид
 
-	void set_echo(string echo); /// Установить эхолокацию
+	void set_echo(bool echo); /// Установить эхолокацию
 
-	string get_echo(); /// вернуть эхолокацию
+	bool get_echo(); /// вернуть эхолокацию
 
 };
 
@@ -72,14 +72,14 @@ class Shark : public Aquatic_Inhabitants
 {
 protected:
 	string classShark;			/// Вид акулы
-	string painImpulses;		/// Болевые импульсы
+	bool painImpulses;		/// Болевые импульсы
 	double teeth;				/// Кол-во зубов
 
 public:
 
 	Shark();
 
-	Shark(string class1, string pain); 
+	Shark(string class1, bool pain); 
 
 	~Shark();
 
@@ -91,9 +91,9 @@ public:
 
 	string get_class1();
 
-	void set_pain(string pain);
+	void set_pain(bool pain);
 
-	string get_pain();
+	bool get_pain();
 
 	void set_teeth(double teeth);
 

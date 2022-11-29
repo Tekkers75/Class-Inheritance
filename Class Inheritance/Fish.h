@@ -20,7 +20,7 @@ public:
 	Aquatic_Inhabitants(); 
 
 	/// Конструктор с параметрами
-	Aquatic_Inhabitants(string eat1, double size1, string habitat1); 
+	Aquatic_Inhabitants(const string eat1, double size1, const string habitat1);
 
 	/// Деструктор
 	~Aquatic_Inhabitants(); 
@@ -32,19 +32,19 @@ public:
 	void set_size(double l); 
 
 	/// Вернуть длину
-	double get_size(); 
+	double get_size() const;
 
 	/// Установить рацион питания
-	void set_eat(string eat1); 
+	void set_eat(const string eat1);
 
 	/// Вернуть рацион питания
-	string get_eat(); 
+	string get_eat() const;
 
 	/// Установить место обитания
-	void set_habitat(string habitat1);
+	void set_habitat(const string habitat1);
 
 	/// Вернуть место обитания
-	string get_habitat();
+	string get_habitat()const;
 
 
 };
@@ -60,22 +60,22 @@ public:
 	Dolphin(); 
 
 	/// Конструктор с параметрами
-	Dolphin(string class1, bool echo); 
+	Dolphin(const string class1, bool echo);
 
 	/// Деструктор
 	~Dolphin(); 
 
 	/// Установить параметры из основного класса
-	void set_parametr(string eat1, double size1, string habitat1);
+	void set_parametr(const string eat1, double size1, const  string habitat1);
 
 	/// Виртуальный вывод в одну строку
 	string toString() override; 
 
 	/// Установить вид
-	void set_сlass(string class1); 
+	void set_сlass(const string class1);
 
 	/// Вернуть вид
-	string get_сlass(); 
+	string get_сlass() const;
 
 	/// Установить эхолокацию
 	void set_echo(bool echo); 
@@ -99,28 +99,28 @@ public:
 	Shark();
 
 	/// Конструктор с параметрами
-	Shark(string class1, bool pain); 
+	Shark(const string class1, bool pain); 
 	
 	/// Деструктор
 	~Shark();
 
 	/// Установить параметры из основного класса
-	void set_parametr(string eat1, double size1, string habitat1);
+	void set_parametr(const string eat1, double size1, const string habitat1);
 	
 	/// Виртуальный вывод в одну строку
 	string toString() override; 
 
 	/// Установить вид
-	void set_class1(string class1);
+	void set_class1(const string class1);
 
 	/// Вернуть вид 
-	string get_class1();
+	string get_class1() const;
 
 	/// Установить болевые импульсы
 	void set_pain(bool pain);
 
 	/// Вернуть болевые импульсы
-	bool get_pain();
+	bool get_pain() const;
 
 	/// Установить кол-во зубов
 	/*void set_teeth(double teeth);

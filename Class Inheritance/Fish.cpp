@@ -28,7 +28,7 @@ Aquatic_Inhabitants::Aquatic_Inhabitants()
 }
 
 /// Конструктор c параметрами
-Aquatic_Inhabitants::Aquatic_Inhabitants(string eat1, double size1, string habitat1)
+Aquatic_Inhabitants::Aquatic_Inhabitants(const string eat1, double size1, const  string habitat1)
 {
 	if (eat1 == "") throw invalid_argument("Error: field eat is empty");
 	if (size1 != (double)size1) throw invalid_argument("Error: field size is empty");
@@ -56,29 +56,29 @@ void Aquatic_Inhabitants::set_size(double l) {
 }
 
 /// Вернуть длину
-double Aquatic_Inhabitants::get_size() {
+double Aquatic_Inhabitants::get_size() const {
 	return size;
 }
 
 /// Установить рацион питания
-void Aquatic_Inhabitants::set_eat(string eat1) {
+void Aquatic_Inhabitants::set_eat(const string eat1) {
 	if (eat1 == "") throw invalid_argument("Error: field eat is empty");
 	eat = eat1;
 }
 
 /// Вернуть рацион питания
-string Aquatic_Inhabitants::get_eat() {
+string Aquatic_Inhabitants::get_eat() const {
 	return eat;
 } 
 
 /// Установить место обитания
-void Aquatic_Inhabitants::set_habitat(string habitat1) {
+void Aquatic_Inhabitants::set_habitat(const string habitat1) {
 	if (habitat1 == "") throw invalid_argument("Error: field habitat is empty");
 	habitat = habitat1;
 }
 
 /// Вернуть место обитания
-string Aquatic_Inhabitants::get_habitat() {
+string Aquatic_Inhabitants::get_habitat() const {
 	return habitat;
 }
 
@@ -91,7 +91,7 @@ Dolphin::Dolphin() {
 }
 
 /// Конструктор с параметрами
-Dolphin::Dolphin(string class1, bool echo) {
+Dolphin::Dolphin(const string class1, bool echo) {
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
 	if (echo != 1 && echo != 0) throw invalid_argument("Error: field echo is empty");
 	classDolphin = class1;
@@ -102,7 +102,7 @@ Dolphin::Dolphin(string class1, bool echo) {
 Dolphin::~Dolphin() {}
 
 /// Установить параметры из основного класса
-void Dolphin::set_parametr(string eat1, double size1, string habitat1) {
+void Dolphin::set_parametr(const string eat1, double size1, const  string habitat1) {
 	if (eat1 == "") throw invalid_argument("Error: field eat is empty");
 	if (size1 != (double)size1) throw invalid_argument("Error: field size is empty");
 	if (size1 <= 0) throw invalid_argument("Error: field size <= 0");
@@ -117,13 +117,13 @@ string Dolphin::toString() {
 }
 
 /// Установить вид
-void Dolphin::set_сlass(string class1) {
+void Dolphin::set_сlass(const string class1) {
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
 	classDolphin = class1;
 }
 
 /// Вернуть вид
-string Dolphin::get_сlass() {
+string Dolphin::get_сlass()const {
 	return classDolphin;
 }
 
@@ -147,7 +147,7 @@ Shark::Shark() {
 }
 
 /// Конструктор с параметрами
-Shark::Shark(string class1, bool pain) {
+Shark::Shark(const string class1, bool pain) {
 	if (pain != 1 && pain != 0) throw invalid_argument("Error: field pain is empty");
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
 	classShark = class1;
@@ -159,7 +159,7 @@ Shark::Shark(string class1, bool pain) {
 Shark::~Shark() {}
 
 /// Установить параметры из основного класса
-void Shark::set_parametr(string eat1, double size1, string habitat1) {
+void Shark::set_parametr(const string eat1, double size1, const  string habitat1) {
 	if (eat1 == "") throw invalid_argument("Error: field eat is empty");
 	if (habitat1 == "") throw invalid_argument("Error: field eat is empty");
 	if (size1 != (double)size1) throw invalid_argument("Error: field size is empty");
@@ -175,13 +175,13 @@ string Shark::toString() {
 }
 
 /// Установить вид
-void Shark::set_class1(string class1) {
+void Shark::set_class1(const string class1) {
 	if (class1 == "") throw invalid_argument("Error: field class is empty");
 	classShark = class1;
 }
 
 /// Вернуть вид 
-string Shark::get_class1() {
+string Shark::get_class1()const {
 	return classShark;
 }
 
@@ -192,7 +192,7 @@ void Shark::set_pain(bool pain) {
 }
 
 /// Вернуть болевые импульсы
-bool Shark::get_pain() {
+bool Shark::get_pain()const {
 	return painImpulses;
 }
 
